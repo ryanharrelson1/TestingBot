@@ -1,4 +1,7 @@
 import { Client, IntentsBitField } from "discord.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const client = new Client({
   intents: [
@@ -41,6 +44,4 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login(
-  "MTI0MDUzMzk3ODkyNzA3NTM3MA.GA_KBG.wCm16g9E2HtE-_XXeXtqDzvyLRuU1g9beV1Mzk"
-);
+client.login(process.env.Discord_Key);
